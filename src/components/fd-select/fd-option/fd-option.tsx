@@ -16,15 +16,18 @@ export class FdOption {
   @Element()
   host: HTMLElement;
 
+  private _liElement?: HTMLElement;
+
   componentDidLoad(): void {
-    this.host.addEventListener('focus', () =>
-      console.log(this.host.getElementsByTagName('li')[0])
-    );
+    this.host.addEventListener('focus', () => {
+      console.log(this._liElement);
+      this._liElement.focus();
+    });
   }
 
   render() {
     return (
-      <li class="fd-list__item" tabindex="0">
+      <li class="fd-list__item" tabindex="0" ref={el => this._liElement = el as HTMLElement}>
         <span class="fd-list__title">
           <slot></slot>
         </span>

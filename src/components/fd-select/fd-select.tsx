@@ -41,18 +41,30 @@ export class FdSelect {
   private _refreshListeners(): void {
     for (let i = 0; i < this.host.children.length; i++) {
       this._handleElementClick(this.host.children.item(i));
+      this._handleElementKeyDown(this.host.children.item(i), i);
     }
   }
 
   private _handleElementClick(element: any): void {
-    element.addEventListener('click', () => {
+    element.addEventListener('keyup', () => {
       element.focus();
       console.log(element);
     });
   }
 
   private _handleElementKeyDown(element: Element, index: number): void {
-
+    element.addEventListener('keydown', (event: KeyboardEvent) => {
+      switch ( event.code ) {
+        case 'ArrowDown': {
+          if (index < this.host.children.length - 1) {
+            console.log('focus');
+            console.log(this.host.children.item(index + 1) as HTMLElement);
+            (this.host.children.item(index + 1) as HTMLElement).focus();
+          }
+          break;
+        }
+      }
+    });
   }
 
 }

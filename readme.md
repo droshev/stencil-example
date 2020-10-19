@@ -70,3 +70,11 @@ The first step for all three of these strategies is to [publish to NPM](https://
 - Run `npm install my-component --save`
 - Add an import to the npm packages `import my-component;`
 - Then you can use the element anywhere in your template, JSX, html etc
+
+
+### Issues (Jedrzej):
+- Dev Mode is not testable on IE11
+- There is no equivalent for `@ContentChild(ren)` from angular. So there is no way to get reference to other 
+webcomponent nested inside as a `<slot>`. Also there is no way to trigger any events in `<slot>` from parent component,
+because of it's treated as a separated DOM
+- Some basic changes in code requires to re-run `npm run start`  

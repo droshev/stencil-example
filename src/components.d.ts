@@ -34,6 +34,7 @@ export namespace Components {
         "type": string;
     }
     interface FdOption {
+        "str": string;
     }
     interface FdSelect {
     }
@@ -114,6 +115,7 @@ declare namespace LocalJSX {
     interface FdOption {
         "onClick"?: (event: CustomEvent<KeyboardEvent>) => void;
         "onKeyDown"?: (event: CustomEvent<KeyboardEvent>) => void;
+        "str"?: string;
     }
     interface FdSelect {
     }

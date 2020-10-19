@@ -1,0 +1,5 @@
+:host {
+  display: block;
+}
+
+@import "~fundamental-styles/dist/list.css";

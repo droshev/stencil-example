@@ -33,6 +33,10 @@ export namespace Components {
          */
         "type": string;
     }
+    interface FdOption {
+    }
+    interface FdSelect {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -55,6 +59,18 @@ declare global {
         prototype: HTMLButtonComponentElement;
         new (): HTMLButtonComponentElement;
     };
+    interface HTMLFdOptionElement extends Components.FdOption, HTMLStencilElement {
+    }
+    var HTMLFdOptionElement: {
+        prototype: HTMLFdOptionElement;
+        new (): HTMLFdOptionElement;
+    };
+    interface HTMLFdSelectElement extends Components.FdSelect, HTMLStencilElement {
+    }
+    var HTMLFdSelectElement: {
+        prototype: HTMLFdSelectElement;
+        new (): HTMLFdSelectElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -63,6 +79,8 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "button-component": HTMLButtonComponentElement;
+        "fd-option": HTMLFdOptionElement;
+        "fd-select": HTMLFdSelectElement;
         "my-component": HTMLMyComponentElement;
     }
 }
@@ -93,6 +111,12 @@ declare namespace LocalJSX {
          */
         "type"?: string;
     }
+    interface FdOption {
+        "onClick"?: (event: CustomEvent<KeyboardEvent>) => void;
+        "onKeyDown"?: (event: CustomEvent<KeyboardEvent>) => void;
+    }
+    interface FdSelect {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -109,6 +133,8 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "button-component": ButtonComponent;
+        "fd-option": FdOption;
+        "fd-select": FdSelect;
         "my-component": MyComponent;
     }
 }
@@ -117,6 +143,8 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "button-component": LocalJSX.ButtonComponent & JSXBase.HTMLAttributes<HTMLButtonComponentElement>;
+            "fd-option": LocalJSX.FdOption & JSXBase.HTMLAttributes<HTMLFdOptionElement>;
+            "fd-select": LocalJSX.FdSelect & JSXBase.HTMLAttributes<HTMLFdSelectElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }

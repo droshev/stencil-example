@@ -58,8 +58,6 @@ export class ButtonComponent {
   public compact = false;
 
   getClass(): string {
-    console.log(this.fdmenu);
-    console.log(this.compact);
     return 'fd-button' +
       (this.fdtype ? ` fd-button--${this.fdtype}` : '') +
       (this.compact ? ' fd-button--compact' : '') +

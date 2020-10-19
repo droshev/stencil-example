@@ -2,8 +2,11 @@
   display: inline-block;
 }
 
-@import "~fundamental-styles/dist/button.css";
+@import "~fundamental-styles/dist/select.css";
 @import "~fundamental-styles/dist/icon.css";
+@import "~fundamental-styles/dist/popover.css";
+@import "~fundamental-styles/dist/list.css";
+@import "~fundamental-styles/dist/button.css";
 
 .fd-button {
   align-items: center;

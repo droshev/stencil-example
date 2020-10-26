@@ -47,7 +47,7 @@ export class FdSelect {
         <div class="fd-popover__body fd-popover__body--no-arrow fd-popover__body--dropdown" aria-hidden={this.open ? "false" : "true"}>
           <ul class="fd-list fd-list--dropdown fd-list--compact">
             <slot></slot>
-            {/* Equivalent for ViewChild()*/}
+             {/*Equivalent for ViewChild()*/}
             {/*<fd-option ref={el => this.option = el as FdOption}>123123</fd-option>*/}
           </ul>
         </div>

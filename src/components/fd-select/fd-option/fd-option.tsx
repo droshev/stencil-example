@@ -1,4 +1,4 @@
-import { Component, Event, h, EventEmitter, Element, Prop } from '@stencil/core';
+import { Component, h, Element, Prop } from '@stencil/core';
 
 @Component({
   tag: 'fd-option',
@@ -6,13 +6,6 @@ import { Component, Event, h, EventEmitter, Element, Prop } from '@stencil/core'
   shadow: true,
 })
 export class FdOption {
-
-  @Event()
-  keyDown: EventEmitter<KeyboardEvent>
-
-  @Event()
-  click: EventEmitter<KeyboardEvent>
-
   @Element()
   host: HTMLElement;
 
@@ -23,8 +16,6 @@ export class FdOption {
 
   componentDidLoad(): void {
     this.host.addEventListener('focus', () => {
-      console.log(this._liElement);
-      console.log('focused');
       this._liElement.focus();
     });
   }

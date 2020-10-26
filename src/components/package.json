@@ -1,0 +1,17 @@
+{
+  "name": "stencil-example",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SAP/fundamental-ngx"
+  },
+  "engine": {
+    "node": ">= 10"
+  },
+  "description": "Stencil Component Starter",
+  "main": "dist/index.cjs.js",
+  "module": "dist/custom-elements/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/custom-elements/index.d.ts"
+}

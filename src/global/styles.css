@@ -13,3 +13,12 @@
   font-weight: normal;
   font-style: normal;
 }
+
+:root{
+  background-color: var(--sapBackgroundColor);
+  color: var(--sapTextColor);
+  font-family: var(--sapFontFamily);
+  font-size: var(--sapFontSize);
+}
+
+@import 'sap_fiori_3_dark.css';
